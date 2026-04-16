@@ -4,7 +4,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/RootNavigator';
 import { ToolCard } from '../components/ToolCard';
 import { Theme } from '../constants/theme';
-import { Scale, QrCode, Calculator, Key } from 'lucide-react-native';
+import { Scale, QrCode, Calculator, Key, ListTodo } from 'lucide-react-native';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
@@ -36,6 +36,12 @@ const TOOLS = [
     title: 'Pass Generator',
     icon: Key,
     route: 'PasswordGenerator' as const,
+  },
+  {
+    id: 'task-manager',
+    title: 'Task Manager',
+    icon: ListTodo,
+    route: 'TaskManager' as const,
   },
 ];
 
