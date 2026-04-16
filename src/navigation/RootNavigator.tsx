@@ -6,6 +6,7 @@ import { UnitConverterScreen } from '../modules/unitConverter/UnitConverterScree
 import { QrScannerScreen } from '../modules/qrScanner/QrScannerScreen';
 import { BmiCalculatorScreen } from '../modules/bmiCalculator/BmiCalculatorScreen';
 import { PasswordGeneratorScreen } from '../modules/passwordGenerator/PasswordGeneratorScreen';
+import { TaskManagerScreen } from '../modules/taskManager/TaskManagerScreen';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -13,6 +14,7 @@ export type RootStackParamList = {
   QrScanner: undefined;
   BmiCalculator: undefined;
   PasswordGenerator: undefined;
+  TaskManager: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -68,6 +70,11 @@ export const RootNavigator = () => {
           name="PasswordGenerator" 
           component={PasswordGeneratorScreen} 
           options={{ title: 'Password Generator' }} 
+        />
+        <Stack.Screen 
+          name="TaskManager" 
+          component={TaskManagerScreen} 
+          options={{ title: 'Task Manager' }} 
         />
       </Stack.Navigator>
     </NavigationContainer>
