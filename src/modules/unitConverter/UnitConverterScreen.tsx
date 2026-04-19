@@ -63,7 +63,7 @@ export const UnitConverterScreen = () => {
       const factors = CONVERSIONS[category as 'Length' | 'Weight'];
       const baseValue = num * (factors[fromUnit as keyof typeof factors] as number);
       const res = baseValue / (factors[toUnit as keyof typeof factors] as number);
-      return res.toFixed(4).replace(/\.?0+$/, '');
+      return res.toFixed(2);
     }
   };
 

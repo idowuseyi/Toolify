@@ -4,7 +4,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/RootNavigator';
 import { ToolCard } from '../components/ToolCard';
 import { Theme } from '../constants/theme';
-import { Scale, QrCode, Calculator, Key, ListTodo } from 'lucide-react-native';
+import { Scale, QrCode, Calculator, Key, ListTodo, FunctionSquare, Timer, CircleDot, Compass, ScanText, Gauge } from 'lucide-react-native';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
@@ -42,6 +42,42 @@ const TOOLS = [
     title: 'Task Manager',
     icon: ListTodo,
     route: 'TaskManager' as const,
+  },
+  {
+    id: 'calculator',
+    title: 'Calculator',
+    icon: FunctionSquare,
+    route: 'Calculator' as const,
+  },
+  {
+    id: 'stopwatch',
+    title: 'Timer',
+    icon: Timer,
+    route: 'Stopwatch' as const,
+  },
+  {
+    id: 'bubble-level',
+    title: 'Level',
+    icon: CircleDot,
+    route: 'BubbleLevel' as const,
+  },
+  {
+    id: 'compass',
+    title: 'Compass',
+    icon: Compass,
+    route: 'Compass' as const,
+  },
+  {
+    id: 'text-scanner',
+    title: 'Text Scan',
+    icon: ScanText,
+    route: 'TextScanner' as const,
+  },
+  {
+    id: 'speed-test',
+    title: 'Speed Test',
+    icon: Gauge,
+    route: 'SpeedTest' as const,
   },
 ];
 
